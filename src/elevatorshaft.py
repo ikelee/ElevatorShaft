@@ -1,15 +1,25 @@
 # Bailey Thompson, Charles Lei, Gordon Winchester, Ike Lee
-# Elevator Shaft (0.0.5)
+# Elevator Shaft (0.1.1)
 # 12 May 2017
 # Simulates an elevator shaft.
 
-from src.fileio import get_data
+from fileio import get_data
+import elevator_search as esearch
 
 
 def main():
     data = get_data()
     check_data(data)
-    print(data)
+
+    ecount = data[0]
+    fcount = data[1]
+    eventlist = data[2]
+    count = 0 
+    eposition = 0 
+    
+    for i in range(1000):
+        if i == eventlist[count]["time"]: 
+            path = esearch.elevator_search(eposition, [], eventlist[count])
 
 
 def check_data(data):
