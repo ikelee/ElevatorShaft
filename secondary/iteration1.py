@@ -1,21 +1,19 @@
 import json
-
-
+import sys
 def abs(e):
     return e if e >= 0 else -e
-
 
 # read as json
 def read_file(filename):
     with open(filename) as data:
         return json.load(data)
 
-
 # returns int, int, list of objects
 def get_data():
-    data = read_file("../test_cases/elevator_practice1.json")
+    data = read_file("elevator_practice.json")
     return data["elevators"], data["floors"], data["events"]
 
+a = open("output1.txt", "w")
 
 def naive_solve(elevators, floors, events):
     answer_sequence = [1]  # sequence of floors to visit
@@ -41,6 +39,8 @@ def naive_solve(elevators, floors, events):
     dropoff_sum, sum_starts = 0, 0
     time = 0
     while True:
+        a.write(str(time) + "(1, 0)" + "\n")
+
         if time < 1001:
             events_so_far += event_times[time]
         if time >= next_avail_time:
@@ -50,12 +50,12 @@ def naive_solve(elevators, floors, events):
         if time > 1000 and len(events_so_far) == 0:
             break
         time += 1
-    print("sequence of moves:", answer_sequence)
+    print "sequence of moves:", answer_sequence
     sum_starts = sum(map(lambda e: e["time"], events))
     total_wait = dropoff_sum - sum_starts
-    print("total wait time:", total_wait)
-    print("total start time:", sum_starts)
-    print("total dropoff time:", dropoff_sum)
+    print "total wait time:", total_wait
+    print "total start time:", sum_starts
+    print "total dropoff time:", dropoff_sum
 
 
 elevators, floors, events = get_data()
