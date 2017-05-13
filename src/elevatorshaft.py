@@ -16,10 +16,31 @@ def main():
     eventlist = data[2]
     count = 0 
     eposition = 0 
+    path = ()
+    pending_events = []
     
     for i in range(1000):
+        
+        if path != (): 
+            if path[1][0][1] > eposition: 
+                eposition = eposition + 1/3
+            elif path[1][0][1] < eposition: 
+                eposition = eposition - 1/3
+            else: 
+                print "error"
+
+            print eposition    
         if i == eventlist[count]["time"]: 
-            path = esearch.elevator_search(eposition, [], eventlist[count])
+
+            path = esearch.elevator_search(eposition, pending_events, [eventlist[count]])
+            pending_events.append(eventlist[count])
+
+            count += 1
+
+            print path
+
+
+
 
 
 def check_data(data):
