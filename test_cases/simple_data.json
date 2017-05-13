@@ -1,0 +1,56 @@
+{
+    "floors": 10,
+    "elevators": 1,
+    "events": [
+        {
+            "time": 12,
+            "start": 5,
+            "end": 7
+        },
+        {
+            "time": 21,
+            "start": 7,
+            "end": 9
+        },
+        {
+            "time": 55,
+            "start": 4,
+            "end": 5
+        },
+        {
+            "time": 63,
+            "start": 6,
+            "end": 6
+        },
+        {
+            "time": 94,
+            "start": 9,
+            "end": 7
+        },
+        {
+            "time": 104,
+            "start": 4,
+            "end": 7
+        },
+        {
+            "time": 124,
+            "start": 3,
+            "end": 7
+        },
+        {
+            "time": 141,
+            "start": 1,
+            "end": 3
+        },
+        {
+            "time": 166,
+            "start": 1,
+            "end": 2
+        },
+        {
+            "time": 185,
+            "start": 7,
+            "end": 9
+        }
+    ]
+}
