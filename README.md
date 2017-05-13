@@ -1,2 +1,2 @@
 # ElevatorShaft
-Simulation of an elevator.
+Simulation of an elevator shaft.
