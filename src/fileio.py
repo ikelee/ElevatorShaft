@@ -3,7 +3,7 @@ import json
 
 # Returns int, int, list of objects. This function is called from outside.
 def get_data():
-    data = read_file("test_cases/elevator_practice1.json")
+    data = read_file("../test_cases/elevator_practice1.json")
     return data["elevators"], data["floors"], data["events"]
 
 

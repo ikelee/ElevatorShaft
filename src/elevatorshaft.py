@@ -1,5 +1,5 @@
 # Bailey Thompson, Charles Lei, Ike Lee
-# Elevator Shaft (0.0.1)
+# Elevator Shaft (0.0.2)
 # 12 May 2017
 # Simulates an elevator shaft.
 
